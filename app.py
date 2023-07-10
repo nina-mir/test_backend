@@ -42,7 +42,7 @@ def all_data():
     send a filtered JSON to the frontend
     """
 
-    return jsonify(data)
+    return jsonify({"status": "success", "data": data})
 
 if __name__ == "__main__":
     app.run()
