@@ -41,22 +41,8 @@ def all_data():
     or if there's a query
     send a filtered JSON to the frontend
     """
-    query = request.get_json()
-    if query is None:
-        return jsonify({"status": "success", "data": data})
 
-    # Extract WORDS
-    query_mood = query.get("mood")
-    query_reading = query.get("readingTime")
-    # create a data_to_send object
-
-    return jsonify(
-        {
-            "status": "success",
-            "data": "This is working well, Esteban!" + query_mood + query_reading,
-        }
-    )
-
+    return jsonify({"status": "success", "data": data})
 
 if __name__ == "__main__":
     app.run()
